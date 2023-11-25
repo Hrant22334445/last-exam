@@ -1,0 +1,84 @@
+body {
+    background-color: #51BEE6;
+}
+
+.tasks {
+    display: flex;
+}
+
+.started {
+    background-color: white;
+    width: 230px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.inProgress {
+    background-color: white;
+    width: 230px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.end {
+    background-color: white;
+    width: 230px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.name {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px 11px 0;
+}
+
+.content {
+    display: flex;
+    width: 220px;
+    height: 30px;
+    justify-content: start;
+    align-items: center;
+    padding: 10px;
+    border-radius: 7px;
+    cursor: pointer;
+    border: 1px solid black;
+
+}
+
+.content:hover {
+    border: 2px solid black;
+}
+
+.keter {
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.keter:hover {
+    background-color: rgb(168, 168, 168);
+}
+
+.addNew {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 220px;
+    height: 30px;
+    padding: 8px;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+}
+
+.addNew:hover {
+    background-color: rgb(171, 171, 171);
+} 

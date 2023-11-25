@@ -1,0 +1,75 @@
+body {
+    background-color: #51BEE6;
+}
+
+.signin {
+    margin-top: 10px;
+    width: 220px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: blue;
+    color: white;
+    font-size: 19px;
+    align-items: center;
+    justify-content: center;
+}
+
+.signin:hover {
+    box-shadow: 2px 2px 4px rgba(15, 3, 245, 0.675);
+}
+
+.GitHub {
+    margin-top: 5px;
+    width: 220px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: blue;
+    color: white;
+    font-size: 19px;
+    align-items: center;
+    justify-content: center;
+}
+
+.GitHub:hover {
+    box-shadow: 2px 2px 4px rgba(15, 3, 245, 0.675);
+}
+
+.allTags {
+    display: flex;
+    width: 280px;
+    height: 500px;
+    flex-direction: column;
+    margin: 200px 640px;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+    background-color: white;
+}
+
+.input {
+    margin-top: 10px;
+    width: 220px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.onlySign {
+    margin-top: 5px;
+    width: 220px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: blue;
+    color: white;
+    font-size: 19px;
+    align-items: center;
+    justify-content: center;
+}
+
+.onlySign:hover {
+    box-shadow: 2px 2px 4px rgba(15, 3, 245, 0.675);
+}
+
+.chief {
+    margin-bottom: 90px;
+}

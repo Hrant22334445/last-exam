@@ -28,13 +28,22 @@ const SignIn: FC = () => {
   }
 
   return (
-    <div>
+    <div className={styles.allSign}>
+        <div className={styles.allTags}>
+        <h1 className={styles.chief}>Wellcome To Trello</h1>
+        <h1>Sign In</h1>
+        <input className={styles.input} type='text' placeholder='email' />
+        <input className={styles.input} type='password' placeholder='password' />
+        <button className={styles.onlySign}>
+            Sign In
+        </button>
         <button onClick={signIn} className={styles.signin}>
       Sign In With Google
     </button>
-    <button onClick={GitHub}>
+    <button onClick={GitHub} className={styles.GitHub}>
         Sign In With GitHub
     </button>
+        </div>
     </div>
   )
 }
