@@ -3,13 +3,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './styles/index.scss'
 import Header from "../features/Header";
 import { onAuthStateChanged, signOut, User } from 'firebase/auth'
-import { auth } from '../firebase'
+import { auth } from "../firebase.config";
 import SignIn from "../features/SignIn";
-import Board from "../features/Board";
-import Boards from "../features/Boards";
 
-const BoardPage = lazy(() => import('../pages/BoardPage/ui/BoardPage'))
-const ProfilePage = lazy(() => import('../pages/ProfilePage/ui/ProfilePage'))
+const BoardPage = lazy(() => import('../pages/BoardPage'))
+const ProfilePage = lazy(() => import('../pages/ProfilePage'))
+const BoardsPage = lazy(() => import('../pages/BoardsPage'))
 
 const App: React.FC = () => {
     const [user, setUser] = useState<User | null>(null)
@@ -33,7 +32,6 @@ const App: React.FC = () => {
                 user ? (
                     <div>
                       <Header handleSignOut={handleSingOut} user={user} />
-                    <Board />
                     </div>
                 ) : (
                     <SignIn />
@@ -43,6 +41,7 @@ const App: React.FC = () => {
                 <Routes>
                     <Route path="/board" element={<BoardPage />} />
                     <Route path="/profile" element={<ProfilePage user={user} />} />
+                    <Route path="/boards" element={<BoardsPage user={user} handleSignOut={handleSingOut} />} />
                 </Routes>
             </Suspense>
         </div>

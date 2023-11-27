@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from './Board.module.css'
 
 const Board: React.FC = () => {
+    
     return (
         <div className={styles.tasks}>
             <div className={styles.started}>

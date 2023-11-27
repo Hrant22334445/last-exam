@@ -16,6 +16,7 @@
     width: 150px;
     height: 100px;
     background-color: #F984E5;
+    cursor: pointer;
 }
 
 .linkToBoard {

@@ -4,13 +4,19 @@ import SignIn from '../SignIn';
 import styles from './Boards.module.css'
 import { Link } from 'react-router-dom';
 import Board from '../Board/Board';
+import Header from '../Header';
 
-const Boards: FC<BoardsProps> = ({ user }) => {
+const Boards: FC<BoardsProps> = ({ user, handleSignOut }) => {
     const [board, setBoard] = useState<boolean>(false)
 
-    const showBoards = () => {
-        return setBoard(!board)
-    }
+    // const showBoards = () => {
+    //   return (
+    //     <>
+    //   <Header handleSignOut={handleSignOut} user={user} />
+    //   <Board/>
+    //   </>
+    //   )
+    // }
 
   return (
     <div className={styles.allBoards}>
@@ -40,16 +46,7 @@ const Boards: FC<BoardsProps> = ({ user }) => {
         <br />
 
         <div className={styles.myBoards}>
-            {
-                board ? (
-                    <>
-                    <Board />
-                    <Link className="display: none;" to='/board'>My Board</Link>
-                    </>
-                ) : (
-                    <Link className={styles.linkToBoard} to='/board'>My Board</Link>
-                )
-            }
+        <Link className={styles.linkToBoard} to='/board'>My Board</Link>
         </div>
     </div>
   )
