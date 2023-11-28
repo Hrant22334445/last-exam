@@ -3,16 +3,11 @@ import { Link } from 'react-router-dom'
 import SignIn from '../SignIn/SignIn'
 import styles from './Header.module.css'
 import { HeaderProps } from './Header.interface'
-import Profile from '../Profile'
 
 const Header: React.FC<HeaderProps> = ({ user, handleSignOut }) => {
     const [isUserMenuOpen, setUserMenuOpen] = useState<boolean>(false)
     const toggleUserMenu = (): void => {
         setUserMenuOpen(!isUserMenuOpen)
-    }
-
-    const about = () => {
-      return <Profile user={user} />
     }
 
     return (

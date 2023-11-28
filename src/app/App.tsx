@@ -5,11 +5,13 @@ import Header from "../features/Header";
 import { onAuthStateChanged, signOut, User } from 'firebase/auth'
 import { auth } from "../firebase.config";
 import SignIn from "../features/SignIn";
+import { useNavigate } from "react-router-dom";
 
 const BoardPage = lazy(() => import('../pages/BoardPage'))
 const ProfilePage = lazy(() => import('../pages/ProfilePage'))
 const BoardsPage = lazy(() => import('../pages/BoardsPage'))
 const CommentsPage = lazy(() => import('../pages/CommentsPage'))
+const SigninPage = lazy(() => import('../pages/SigninPage'))
 
 const App: React.FC = () => {
     const [user, setUser] = useState<User | null>(null)
@@ -25,6 +27,20 @@ const App: React.FC = () => {
   const handleSingOut = () => {
     signOut(auth).catch(error => console.log(error))
   }
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const unregistered = auth.onAuthStateChanged((user) => {
+      if (user) {
+        navigate('/boards')
+      } else {
+        navigate('/SignIn')
+      }
+    })
+
+    return () => unregistered();
+  }, [navigate])
 
     return (
         <BrowserRouter>
@@ -44,6 +60,7 @@ const App: React.FC = () => {
                     <Route path="/profile" element={<ProfilePage user={user} />} />
                     <Route path="/boards" element={<BoardsPage user={user} handleSignOut={handleSingOut} />} />
                     <Route path="/comments" element={<CommentsPage />} />
+                    <Route path="/SignIn" element={<SigninPage />} />
                 </Routes>
             </Suspense>
         </div>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import styles from './Board.module.css'
 import { Link } from "react-router-dom";
+import Header from "../Header";
 
 interface CardType {
     id: string;
@@ -104,6 +105,8 @@ const Board: React.FC = () => {
                             {
                               col.cards.map((card, index) => {
                                 return (
+                                  <div>
+                                    <Header />
                                   <Draggable key={card.id} draggableId={card.id} index={index}>
                                     {
                                       (provided) => {
@@ -122,6 +125,7 @@ const Board: React.FC = () => {
                                       }
                                     }
                                   </Draggable>
+                                  </div>
                                 )
                               })
                             }
