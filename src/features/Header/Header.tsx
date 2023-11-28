@@ -23,10 +23,10 @@ const Header: React.FC<HeaderProps> = ({ user, handleSignOut }) => {
                 <Link to='/'>Workspaces</Link>
               </li>
               <li>
-                <Link to='/boards'>Recent Boards</Link>
+                <Link to='/boards'>Boards</Link>
               </li>
               <li>
-                <Link to='/contact'>Starred boards</Link>
+                <Link to='/contact'>Started boards</Link>
               </li>
               <li>
                 <Link to='/template'>Templates</Link>

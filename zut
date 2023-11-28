@@ -1,0 +1,7 @@
+className={styles.tasks}
+
+<div className={styles.name}>
+                    Started <button className={styles.keter}>...</button>
+                </div>
+                <button className={styles.content}>test</button>
+                <button className={styles.addNew}>Add New</button>
