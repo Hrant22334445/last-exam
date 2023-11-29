@@ -41,14 +41,15 @@ body {
 
 .content {
     display: flex;
-    width: 220px;
-    height: 30px;
+    width: 243px;
     justify-content: start;
     align-items: center;
     padding: 10px;
     border-radius: 7px;
     cursor: pointer;
     border: 1px solid black;
+    text-decoration: none;
+    margin-top: 5px;
 
 }
 
@@ -56,14 +57,16 @@ body {
     border: 2px solid black;
 }
 
-.keter {
+.delete {
     width: 20px;
     height: 20px;
     border: none;
     cursor: pointer;
+    font-size: 10px;
+    align-items: center;
 }
 
-.keter:hover {
+.delete:hover {
     background-color: rgb(168, 168, 168);
 }
 
@@ -71,14 +74,59 @@ body {
     display: flex;
     justify-content: start;
     align-items: center;
-    width: 220px;
+    width: 242px;
     height: 30px;
     padding: 8px;
     border-radius: 7px;
     border: none;
     cursor: pointer;
+    margin-top: 5px;
 }
 
 .addNew:hover {
     background-color: rgb(171, 171, 171);
-} 
+}
+
+.addNewBoard {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 258px;
+    height: 30px;
+    padding: 8px;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+    margin-top: 5px;;
+    background-color: rgba(189, 185, 185, 0.5)
+}
+
+.addNewBoard:hover {
+    border: 1px solid black;
+}
+
+.input {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 242px;
+    height: 20px;
+    padding: 8px;
+    border-radius: 7px;
+    border: none;
+    margin-top: 5px;
+    background-color: rgba(189, 185, 185, 0.5);
+}
+
+.input:hover {
+    border: 1px solid black;
+}
+
+.addBoard {
+    background-color: rgba(189, 185, 185, 0.5);
+    width: 230px auto;
+    height: 100px auto;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+}

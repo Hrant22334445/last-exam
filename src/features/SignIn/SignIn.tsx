@@ -3,6 +3,7 @@ import { auth } from '../../firebase.config'
 import { GoogleAuthProvider, signInWithPopup, GithubAuthProvider } from 'firebase/auth'
 
 import styles from './SignIn.module.css'
+import { Link } from 'react-router-dom'
 
 const SignIn: FC = () => {
 
@@ -37,12 +38,16 @@ const SignIn: FC = () => {
         <button className={styles.onlySign}>
             Sign In
         </button>
+        <Link to={'/boards'}>
         <button onClick={signIn} className={styles.signin}>
       Sign In With Google
     </button>
+        </Link>
+    <Link to={'/boards'}>
     <button onClick={GitHub} className={styles.GitHub}>
         Sign In With GitHub
     </button>
+    </Link>
         </div>
     </div>
   )

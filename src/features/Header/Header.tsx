@@ -54,9 +54,6 @@ const Header: React.FC<HeaderProps> = ({ user, handleSignOut }) => {
                               <Link to='/profile'>Profile</Link>
                             </li>
                             <li>
-                              <a href='#'>Settings</a>
-                            </li>
-                            <li>
                               <button onClick={handleSignOut}>Sign Out</button>
                             </li>
                           </ul>

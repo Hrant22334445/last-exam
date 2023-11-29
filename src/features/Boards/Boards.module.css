@@ -22,4 +22,6 @@
 .linkToBoard {
     padding: 1px 13px;
     text-decoration: none;
+    font-size: 20px;
+    color: blue;
 }
