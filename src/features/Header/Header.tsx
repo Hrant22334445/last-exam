@@ -15,7 +15,7 @@ const Header: React.FC<HeaderProps> = ({ user, handleSignOut }) => {
           <nav className={styles.menu}>
             <ul className={styles.mainMenu}>
               <li>
-                <Link to='/'>Workspaces</Link>
+                <Link to='/about'>About Us</Link>
               </li>
               <li>
                 <Link to='/boards'>Boards</Link>

@@ -11,6 +11,7 @@ const ProfilePage = lazy(() => import('../pages/ProfilePage'))
 const BoardsPage = lazy(() => import('../pages/BoardsPage'))
 const CommentsPage = lazy(() => import('../pages/CommentsPage'))
 const SigninPage = lazy(() => import('../pages/SigninPage'))
+const AboutUsPage = lazy(() => import('../pages/AboutUsPage'))
 
 const App: React.FC = () => {
     const [user, setUser] = useState<User | null>(null)
@@ -46,6 +47,7 @@ const App: React.FC = () => {
                     <Route path="/boards" element={<BoardsPage user={user} handleSignOut={handleSingOut} />} />
                     <Route path="/comments" element={<CommentsPage />} />
                     <Route path="/SignIn" element={<SigninPage />} />
+                    <Route path="/about" element={<AboutUsPage />} />
                 </Routes>
             </Suspense>
         </div>

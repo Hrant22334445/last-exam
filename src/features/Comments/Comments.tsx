@@ -11,7 +11,6 @@ const Comments: FC = () => {
         <div className={styles.windowHeader}>
           <div className={styles.headerTitle}>
             <h2>Comments</h2>
-            <span className={styles.titleInline}>in list <span className={styles.inline}>Backlist</span></span>
           </div>
           <div className={styles.headerClose}>
             <Link to='/board'><FaXmark /></Link>

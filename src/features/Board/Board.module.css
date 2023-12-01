@@ -4,6 +4,7 @@ body {
 
 .tasks {
     display: flex;
+    flex-direction: row;
 }
 
 .started {

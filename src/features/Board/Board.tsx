@@ -21,12 +21,6 @@ const Board: React.FC = () => {
   const [title, setTitle] = useState<string>("");
   const [element, setElement] = useState<string>("");
 
-  const handleDelete = (post: any) => {
-    dispatch(
-      deletePost(post.id)
-    )
-  }
-
     const dispatch = useAppDispatch();
   const posts = useSelector((state: any) => {
 
@@ -56,6 +50,12 @@ const Board: React.FC = () => {
     setTitle("");
     setElement("");
   }
+
+  const handleDelete = (post: any) => {
+    dispatch(
+      deletePost(post.id)
+    )
+  }
     
       return (
 
@@ -67,7 +67,7 @@ const Board: React.FC = () => {
                 return (
                   <div>
                     <div key={post.id} className={styles.started}>
-                    <h2 className={styles.name}>{post.title} <div className={styles.delete} onClick={handleDelete}><FaTrashCan /></div></h2>
+                    <h2 className={styles.name}>{post.title} <button className={styles.delete} onClick={handleDelete}><FaTrashCan /></button></h2>
                     <Link to={'/comments'}><button className={styles.content}>{post.element}</button></Link>
                     <button className={styles.addNew}>Add New</button>
                   </div>

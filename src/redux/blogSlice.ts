@@ -33,9 +33,10 @@ import {
     "blog/createPost",
     async (postData: any) => {
       const docRef = await addDoc(collection(db, "posts"), postData);
-      return { id: docRef.id, ...postData };
+      return { id: docRef.id + 1, ...postData };
     }
   );
+
   
   export const updatePost = createAsyncThunk(
     "blog/updatePost",

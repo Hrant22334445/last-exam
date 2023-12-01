@@ -1,0 +1,14 @@
+.allAboutUs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.second {
+    font-size: 40px;
+}
+
+.first {
+    font-size: 50px;
+}
