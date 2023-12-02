@@ -8,7 +8,7 @@ import {
     doc,
   } from "@firebase/firestore";
   import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-  import { db } from "../firebase.config";
+  import { db } from "../../firebase.config";
   
   export const fetchPosts = createAsyncThunk("blog/fetchPosts", async () => {
     const querySnapshot = await getDocs(collection(db, "posts"));

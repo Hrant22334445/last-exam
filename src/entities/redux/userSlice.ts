@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
-import { auth } from '../firebase.config'
+import { auth } from '../../firebase.config'
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
 
 interface User {

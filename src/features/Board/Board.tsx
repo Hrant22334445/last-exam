@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import styles from './Board.module.css'
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { useAppDispatch } from "../../redux/hooks/useAppDispatch";
-import { fetchPosts, createPost, deletePost } from "../../redux/blogSlice";
+import { useAppDispatch } from "../../entities/redux/hooks/useAppDispatch";
+import { fetchPosts, createPost, deletePost } from "../../entities/redux/blogSlice";
 import { FaTrashCan } from "react-icons/fa6";
 
 interface CardType {
